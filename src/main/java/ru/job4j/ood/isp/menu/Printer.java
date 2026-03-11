@@ -5,7 +5,7 @@ public class Printer implements MenuPrinter {
     public void print(Menu menu) {
         menu.forEach(item -> {
             int level = (int) item.getNumber().chars().filter(ch -> ch == '.').count() - 1;
-            System.out.println("----".repeat(level) + item.getName());
+            System.out.println("----".repeat(level) + item.getNumber() + item.getName());
         });
     }
 }
